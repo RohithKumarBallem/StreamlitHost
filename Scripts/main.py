@@ -66,12 +66,12 @@ import hashlib
 import json
 
 
-lrmodel = joblib.load('models/logistic_regression_model.pkl')
-knnmodel = joblib.load('models/knn_model.pkl')
-rfcmodel = joblib.load('models/rf_model.pkl')
-scaler =  joblib.load('models/scaler.pkl')
+lrmodel = joblib.load('./models/logistic_regression_model.pkl')
+knnmodel = joblib.load('./models/knn_model.pkl')
+rfcmodel = joblib.load('./models/rf_model.pkl')
+scaler =  joblib.load('./models/scaler.pkl')
 
-with open('models/label_encoders.pkl', 'rb') as f:
+with open('./models/label_encoders.pkl', 'rb') as f:
     label_encoders = pickle.load(f)
 
 st.title("Car Recommendation Engine")
@@ -563,7 +563,7 @@ st.header(f"You selected {num_additional_cars} additional cars for analysis.")
 
 # csv is read
 
-car_full_analysis = pd.read_csv("models/clusteringanddata.csv")
+car_full_analysis = pd.read_csv("./models/clusteringanddata.csv")
 
 st.title(" Click a clustering method below to get more similar recommendations:")
 
